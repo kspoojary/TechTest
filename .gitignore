@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/UnitTest/bin/Debug
+/UnitTest/obj/Debug
+/packages
+/EmployeeManagement.Repository/obj/Debug
+/EmployeeManagement.Repository/bin/Debug
+/.vs/config
+/.vs/CRUDAPI/v15/Server/sqlite3/storage.ide-wal
+/.vs/CRUDAPI/v15/Server/sqlite3/storage.ide-shm
+/.vs/CRUDAPI/v15/Server/sqlite3/storage.ide
+/.vs/CRUDAPI/v15/Server/sqlite3/db.lock
+/CRUDAPI/bin
+/CRUDAPI/obj/Debug
+/.vs
