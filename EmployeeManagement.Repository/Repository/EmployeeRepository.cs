@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using EmployeeManagement.Repository.Models;
+
 
 namespace EmployeeManagement.Repository.Repository
 {
@@ -87,6 +90,28 @@ namespace EmployeeManagement.Repository.Repository
                 objEmp.TaxAmount = employee.TaxAmount;
                 employeeDbContext.SaveChanges();
             }
+        }
+
+        IEnumerable<Employee> IEmployeeRepository.GetEmployees()
+        {
+            throw new NotImplementedException();
+        }
+
+        Employee IEmployeeRepository.GetEmployeeById(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Employee IEmployeeRepository.GetEmployeeByEmail(string email)
+        {
+            throw new NotImplementedException();
+        }
+
+       
+
+        public void UpdateEmployee(int empId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

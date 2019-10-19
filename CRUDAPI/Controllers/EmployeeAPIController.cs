@@ -5,6 +5,8 @@ using System.Web.Http;
 using CRUDAPI.Models;
 using System.Data.SqlClient;
 using EmployeeManagement.Repository.Models;
+using System.Web.Mvc;
+using EmployeeManagement.Repository.Repository;
 
 namespace CRUDAPI.Controllers
 {
@@ -45,6 +47,11 @@ namespace CRUDAPI.Controllers
             {
                 throw;
             }
+        }
+
+        private IHttpActionResult Ok(List<EmployeeDetail> employees)
+        {
+            throw new NotImplementedException();
         }
 
         [HttpGet]
@@ -148,4 +155,9 @@ namespace CRUDAPI.Controllers
                 }
             }
         }
+    }
+
+    public interface IHttpActionResult
+    {
+    }
 }

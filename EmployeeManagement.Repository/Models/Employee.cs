@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace EmployeeManagement.Repository.Models
 {
     public class Employee
@@ -13,5 +14,6 @@ namespace EmployeeManagement.Repository.Models
         public string PinCode { get; set; }
         public decimal Salary { get; set; }
         public decimal TaxAmount { get; set; }
+        public string EmpName { get; set; }
     }
 }

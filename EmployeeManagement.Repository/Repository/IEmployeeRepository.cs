@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EmployeeManagement.Repository.Repository;
 
 namespace EmployeeManagement.Repository.Repository
 {
