@@ -6,13 +6,14 @@ using CRUDAPI.Models;
 using System.Data.SqlClient;
 using EmployeeManagement.Repository.Models;
 
+
 namespace CRUDAPI.Controllers
 {
     [RoutePrefix("Api/Employee")]
     public class EmployeeAPIController : ApiController
     {
-        private IEmployeeRepository employeeRepository;
-        public EmployeeAPIController(IEmployeeRepository _employeeRepository)
+        public IEmployeeRepository employeeRepository;
+        public override EmployeeAPIController(IEmployeeRepository _employeeRepository)
         {
             employeeRepository = _employeeRepository;
         }
@@ -49,7 +50,7 @@ namespace CRUDAPI.Controllers
 
         [HttpGet]
         [Route("GetEmployeeDetailsById/{employeeId}")]
-        public IHttpActionResult GetEmployeeById(string employeeId)
+        public override IHttpActionResult GetEmployeeById(string employeeId)
         {
             throw new NotImplementedException();
         }
@@ -148,4 +149,6 @@ namespace CRUDAPI.Controllers
                 }
             }
         }
+    }
 }
+
