@@ -5,6 +5,7 @@ using System.Web.Http;
 using CRUDAPI.Models;
 using System.Data.SqlClient;
 using EmployeeManagement.Repository.Models;
+using EmployeeManagement.Repository.Repository;
 
 namespace CRUDAPI.Controllers
 {
@@ -37,7 +38,8 @@ namespace CRUDAPI.Controllers
                     employeeDetail.DateOfBirth = employee.DateOfBirth;
                     employeeDetail.Gender = employee.Gender;
                     employeeDetail.PinCode = employee.PinCode;
-                    employees.Add(employeeDetail);
+                    //employees.Add(employeeDetail);
+            
                 }
                 return Ok(employees);
             }
@@ -132,20 +134,23 @@ namespace CRUDAPI.Controllers
         /// <returns></returns>
         public decimal GetTaxAmount(decimal salary)
         {
-            int taxAmount = salary * 0.2;
-            if (salary < "500000")
+            int sal = Decimal.ToInt32(salary);
+            int taxAmount = sal * 2;
+            if (salary < 500000)
             {
-                taxAmount = salary;
+                taxAmount = Convert.ToInt32(salary);
             }
 
             if (salary < 500000 || salary < 1000000)
             {
-                taxAmount += salary * .2;
+                taxAmount += sal * 2;
 
                 if (salary < 1000000)
                 {
-                    taxAmount += salary * .3;
+                    taxAmount += sal * 3;
                 }
             }
-        }
+            return taxAmount
+;        }
+    }
 }

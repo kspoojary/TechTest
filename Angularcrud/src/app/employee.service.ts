@@ -21,12 +21,12 @@ export class EmployeeService {
   }
   createEmployee(employee: Employee): Observable<Employee> {
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
-    return this.http.post<Employee>(this.url + '/InsertEmployeeDetails/', employee, httpOptions);
+    return this.http.post<Employee>(this.url + '/InsertEmployeeDetails/',httpOptions);
   }
 
   updateEmployee(employee: Employee): Observable<Employee> {
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
-    return this.http.get<Employee>(this.url + '/UpdateEmployeeDetails/', employee, httpOptions);
+    return this.http.get<Employee>(this.url + '/UpdateEmployeeDetails/',httpOptions);
   }
 
   deleteEmployeeById(employeeid: string): Observable<number> {

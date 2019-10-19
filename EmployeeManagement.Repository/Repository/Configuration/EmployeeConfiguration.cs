@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace EmployeeManagement.Repository.Repository.Configuration
 {
     public class EmployeeConfiguration : EntityTypeConfiguration<Employee>
